@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="A Propos | Julie Fablet" description="A propos de Julie Fablet">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="A Propos"
+				tagline="Merci d'être passé. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/photoabout.jpg"
+					alt="Julie Fablet"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Qui suis-je ?</h2>
+				<div class="content">
+					<p>Je suis Julie Fablet, en pleine reconversion professionnelle vers le développement web, assoiffée d'apprendre et de progresser dans ce domaine.</p>
+
+                    <p>Mon parcours est marqué par une formation pointue et une série de cours en ligne m'ayant plongée dans l'univers des langages de programmation tels que HTML, CSS, JavaScript, mais aussi dans l'exploration de frameworks incontournables tels que React et NodeJS.</p>
+
+                    <p>Mon objectif ? Mettre mes connaissances en action sur des projets captivants, engranger une expérience concrète et injecter mon énergie dans des solutions créatives et novatrices. Je suis ouverte aux opportunités d'alternance ou d'emploi, prête à faire mes preuves et à évoluer dans le monde dynamique du développement web.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+				<b> Formation Developpeur Web - OpenClassRooms - RNCP (niveau 5) </b>
+					<p>Formation à temps plein chez OpenClassrooms sur 6 mois, sous forme de 7 projets à réaliser dans différents langages de programmation.</p>
+				</div>
+			</section>
+			<section>
+			<h2 class="section-title">Skills</h2>
+			<div class="skill">
+				<li><h4>Html/Css</h4><span class="bar"><span class="html"></span></span></li>
+				<li><h4>Javascript</h4><span class="bar"><span class="javascript"></span></span></li>
+				<li><h4>Sass</h4><span class="bar"><span class="sass"></span></span></li>
+				<li><h4>React</h4><span class="bar"><span class="react"></span></span></li>
+				<li><h4>Git/Github</h4><span class="bar"><span class="git"></span></span></li>
+				<li><h4>MongoDB Atlas</h4><span class="bar"><span class="mongo"></span></span></li>
+				<li><h4>NodeJS/npm/ExpressJS</h4><span class="bar"><span class="node"></span></span></li>
+				<li><h4>MySQL</h4><span class="bar"><span class="sql"></span></span></li>
+			</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	h4{
+		margin: 15px 5px 15px 5px;
+	}
+    
+	li{
+		list-style-type:none;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+    .skill{
+		width: 100%;
+		margin: 60px auto;
+		color: #fff;
+		padding: 20px;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+
+	.skill div{
+		margin 20px 0;
+		padding: 10px;
+	}
+
+	.bar{
+		background: #e8d5f1;
+		display: block;
+		height: 20px;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	}
+
+	.bar:hover{
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+
+	.bar span{
+		height: 20px;
+		float: left;
+		background: var(--gradient-accent-orange);
+	}
+
+	.html{
+		width: 80%;
+		animation: html 3s;
+	}
+
+	.javascript{
+		width: 70%;
+		animation: html 3s;
+	}
+
+	.sass{
+		width: 50%;
+		animation: html 3s;
+	}
+
+	.react{
+		width: 75%;
+		animation: html 3s;
+	}
+
+	.git{
+		width: 70%;
+		animation: html 3s;
+	}
+
+	.mongo{
+		width: 60%;
+		animation: html 3s;
+	}
+
+	.node{
+		width: 60%;
+		animation: html 3s;
+	}
+
+	.sql{
+		width: 50%;
+		animation: html 3s;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

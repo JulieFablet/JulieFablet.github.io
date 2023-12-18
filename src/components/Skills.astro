@@ -1,0 +1,63 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+
+    <div class="stack gap-2 lg:gap-4">
+		<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Dev Frontend</h2>
+		<p>En tant que développeuse frontend junior, je suis compétente dans les langages web essentiels tels que HTML, CSS, et JavaScript, ainsi que dans l'utilisation de frameworks comme React.js. Mon rôle consiste à créer des interfaces utilisateur interactives et intuitives, assurant une expérience utilisateur exceptionnelle à travers des designs attractifs et des fonctionnalités dynamiques.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="database" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Dev Backend</h2>
+		<p>En tant que développeuse backend junior, je maîtrise les langages et frameworks côté serveur tels que Node.js et Express. Mon expertise réside dans la conception et la mise en œuvre de la logique applicative, la gestion des bases de données, et le développement d'API robustes pour assurer des fonctionnalités serveur efficaces.</p>
+	</div>
+    <div class="stack gap-2 lg:gap-4">
+		<Icon icon="desktop" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Intégrateur Web</h2>
+		<p>En tant qu'intégrateur web junior, je suis spécialisé dans la conversion de conceptions graphiques en code HTML, CSS, et parfois JavaScript. Mon objectif est de garantir une intégration visuellement fidèle, tout en m'assurant de la compatibilité, de la rapidité de chargement, et de l'accessibilité des sites web. Mon rôle essentiel est de traduire le design en une expérience web fluide et attrayante.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
