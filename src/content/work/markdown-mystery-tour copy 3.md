@@ -1,7 +1,7 @@
 ---
 title: Portfolio Sophie Bluel
 publishDate: 2023-13-12 00:00:05
-img: /assets/portfolioSB.png
+img: /assets/portfolioSB.jpg
 img_alt: Image site portfolio de Sophie Bluel
 description: |
   Développement d'une interface captivante pour le site portfolio d'une architecte d'intérieur, mettant en avant ses réalisations avec une page de présentation, une interface de connexion administrateur, et une modale d'upload de médias.

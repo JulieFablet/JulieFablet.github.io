@@ -1,7 +1,7 @@
 ---
 title: Nina Carducci
 publishDate: 2023-13-12 00:00:10
-img: /assets/nina.png
+img: /assets/nina.jpg
 img_alt: Image site Nina Carducci
 description: |
   Optimisation complète du site web d'une photographe, incluant améliorations SEO, référencement local, accessibilité, résolution de bugs, et une présentation détaillée des interventions avec rapports avant/après.
