@@ -35,4 +35,4 @@ jobs:
         uses: actions/deploy-pages@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main # Changez ceci en fonction de la branche que vous utilisez pour déployer
+          branch: master # Changez ceci en fonction de la branche que vous utilisez pour déployer
