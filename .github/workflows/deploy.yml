@@ -23,7 +23,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-            path: package.json
+            path: PortfolioJulie
             node-version: 18 
             package-manager: npm 
 
