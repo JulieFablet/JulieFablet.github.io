@@ -23,17 +23,16 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-            # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
-            # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (facultatif)
-            # package-manager: yarn # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
+          # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
+          # node-version: 18 # La version spécifique de Node qui doit être utilisée pour construire votre site. Par défaut à 18. (facultatif)
+          # package-manager: yarn # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et construire votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main # Changez ceci en fonction de la branche que vous utilisez pour déployer
