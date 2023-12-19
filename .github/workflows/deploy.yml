@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 16
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
@@ -29,8 +30,8 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-          path: PortfolioJulie
-          package-manager: yarn 
+          package-manager: yarn
+
 
   deploy:
     needs: build
