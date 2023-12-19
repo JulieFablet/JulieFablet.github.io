@@ -18,19 +18,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          node-version: 16
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
           node-version: 16
+
+      - name: Checkout your repository using git
+        run: |
+          npm install -g yarn
+          yarn install
+          yarn build
+
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-          package-manager: yarn
+          package-manager: yarn 
+
 
 
   deploy:
