@@ -26,7 +26,6 @@ jobs:
       - name: Checkout your repository using git
         run: |
           npm install -g yarn
-          cd PorfolioJulie
           yarn install
           yarn build
 
